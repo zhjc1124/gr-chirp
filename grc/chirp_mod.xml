@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<block>
+  <name>Chirp Modulation</name>
+  <key>chirp_mod</key>
+  <category>[chirp]</category>
+  <import>import chirp</import>
+  <make>chirp.mod($BW, $fs, $hamming)</make> 
+  <param>
+    <name>Bandwidth</name>
+    <key>BW</key>
+    <value>BW</value>
+    <type>float</type>
+  </param>
+  <param>
+    <name>Sample Rate</name>
+    <key>fs</key>
+    <value>samp_rate</value>
+    <type>float</type>
+  </param> 
+  <param>
+    <name>Hamming Encode</name>
+    <key>hamming</key>
+    <value>hamming</value>
+    <type>bool</type>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>message</type>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>complex</type>
+  </source>
+</block>
